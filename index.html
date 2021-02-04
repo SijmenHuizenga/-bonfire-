@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <title>Bonfire</title>
+
+    <style>
+        #video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .flame {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(-45deg, rgba(255, 0, 0, 0.1), rgba(164, 164, 41, 0.1));
+            border-radius: 150px 150px 0px 150px;
+            transform: rotate(-135deg);
+            animation: .1s flame infinite;
+            filter: blur(10px);
+            box-shadow: 17px 20px 90px rgba(255, 0, 0, 0.1);
+            border: 45px solid  rgba(0, 0, 0, 0.1);
+            border-left-width: 25px;
+            border-top-width: 25px;
+        }
+
+        @keyframes flame {
+            0% {
+                height: 500px;
+                width: 500px;
+            }
+            50% {
+                height: 600px;
+                width: 600px;
+            }
+            100% {
+                height: 800px;
+                width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+<video autoplay muted loop id="video">
+    <source src="014bd391c39a30c28c5b6f0594a0cbd6.mts-mp430-272.mp4" type="video/mp4">
+</video>
+<div class="flame"></div>
+<div class="flame"></div>
+<div class="flame"></div>
+<div class="flame"></div>
+<div class="flame"></div>
+<div class="flame"></div>
+</body>
+</html>
